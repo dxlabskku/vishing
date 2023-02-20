@@ -28,7 +28,7 @@ if not os.path.exists(checkpoints_path):
     os.mkdir(checkpoints_path)
 
 
-os.system(f'python basic.py --model_name {args.model_name} --feature_time {args.feature_time} --feature_type {args.feature_type} --checkpoints_path {args.checkpoints_path} --result_path {args.result_path} --wav_path {args.num_test}')
+os.system(f'python basic.py --model_name {args.model_name} --feature_time {args.feature_time} --feature_type {args.feature_type} --checkpoints_path {args.checkpoints_path} --result_path {args.result_path} --wav_path {args.num_test} --gpu_id {args.gpu_id}')
 
 
 print("FINISH")
