@@ -12,23 +12,15 @@ We collected vishing dataset, organized as vishing call data and normal call dat
 
 **- Examples of dataset**
 
-	![waveform](https://user-images.githubusercontent.com/117256746/220054333-20731d77-630b-4eb0-984c-75c66930ca55.png)
-
-**- Examples of STFT feature**
-	
-	![stft](https://user-images.githubusercontent.com/117256746/220054387-1151f3e9-c01e-4857-90ed-637c6ae0d011.png)
-
-**- Examples of MEL feature**
-	
-	![mel](https://user-images.githubusercontent.com/117256746/220054373-1d632b48-6bd8-494f-806f-c6158fda1d7d.png)
-
-**- Examples of MFCC feature**
-	
-	![mfcc](https://user-images.githubusercontent.com/117256746/220054398-e782e199-cffe-4607-a1f8-758f1316ec47.png)
+![image](https://user-images.githubusercontent.com/117256746/220054333-20731d77-630b-4eb0-984c-75c66930ca55.png)
 
 
 # Model
-We used light models for detection because we tried to detect vishing in real-time using voice data. Machine learning models which take relatively short learning and evaluation time, and basic Deep learning models. `basic.py`, `DenseNet.py` and `LSTM.py` in `Model` folder are the code for experiments. Here are some examples to train and evaluate the models.
+
+![image](https://user-images.githubusercontent.com/117256746/220055290-cf5f3099-3785-4232-943c-be2d0b9c0372.png)
+
+Image shows the overview of our process to detect vishing. We used light models for detection because we tried to detect vishing in real-time using voice data. Machine learning models which take relatively short learning and evaluation time, and basic Deep learning models. `basic.py`, `DenseNet.py` and `LSTM.py` in `Model` folder are the code for experiments. Here are some examples to train and evaluate the models. 
+
 
 **Basic ML**
 ```
