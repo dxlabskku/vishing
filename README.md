@@ -15,12 +15,12 @@ We used light models for detection because we tried to detect vishing in real-ti
 
 **Basic ML**
 ```
-python ml.py --feature_type 'mfcc' --feature_time '0.5' --result_root './result' --checkpoints_root './checkpoint' --gpu_id 0
+python ml.py --model_name 'SVM' --feature_type 'mfcc' --feature_time '0.5' --wav_path './data/split_wav' --result_root './result' --checkpoints_root './checkpoint' --gpu_id 0
 ```
 
 **Simple DL**
 ```
-python dl.py --model_name 'DenseNet' --feature_type 'mfcc' --feature_time '0.5' --result_root './result' --checkpoints_root './checkpoint' --gpu_id 0
+python dl.py --model_name 'DenseNet' --feature_type 'mfcc' --feature_time '0.5' --wav_path './data/split_wav' --result_root './result' --checkpoints_root './checkpoint' --gpu_id 0
 ```
 
 We set the hyperparmeter of each model as table.
