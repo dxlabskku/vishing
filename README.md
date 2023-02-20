@@ -7,27 +7,37 @@ Voice phishing as known as phone scam has become detrimental to today’s societ
 - Finally, we saw the possibility for real-time voice phishing detection.
 
 
-### Data
+# Data
 We collected vishing dataset, organized as vishing call data and normal call data from [Korean Financial Supervisor Service](https://www.fss.or.kr/fss/main/sub1voice.do?menuNo=200012) and [AI Hub](https://aihub.or.kr/). We segmented the data by 0.1 second the process was coded as `time_split.py` in `preprocess` folder.
 
-### Result
-		0.5	0.6	0.7	0.8	0.9	1	1.1	1.2	1.3	1.4	1.5	1.6	1.7	1.8	1.9	2
-SVM	mel	1.0000 	0.9928 	1.0000 	1.0000 	1.0000 	0.9928 	0.9892 	0.9964 	0.9928 	0.9928 	0.9964 	0.9964 	0.9964 	0.9964 	0.9964 	0.9964 
-	stft	1.0000 	0.9964 	1.0000 	1.0000 	1.0000 	0.9964 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 
-	mfcc	0.9964 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 
-LR	mel	1.0000 	0.9784 	0.9928 	1.0000 	1.0000 	0.9892 	0.9964 	0.9964 	0.9928 	0.9928 	0.9964 	0.9928 	0.9928 	1.0000 	0.9964 	0.9964 
-	stft	0.9964 	0.9928 	0.9964 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 
-	mfcc	0.9964 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 
-DT	mel	0.9993 	0.9813 	0.9842 	0.9878 	0.9683 	0.9705 	0.9691 	0.9791 	0.9734 	0.9770 	0.9813 	0.9777 	0.9842 	0.9820 	0.9835 	0.9820 
-	stft	0.9950 	0.9978 	1.0000 	0.9993 	1.0000 	0.9993 	0.9971 	1.0000 	0.9971 	0.9986 	1.0000 	0.9993 	0.9971 	0.9993 	0.9986 	0.9993 
-	mfcc	0.9986 	0.9971 	0.9971 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	0.9993 	0.9993 
-RF	mel	0.9993 	0.9878 	0.9755 	0.9849 	0.9942 	0.9899 	0.9892 	0.9899 	0.9878 	0.9871 	0.9892 	0.9871 	0.9878 	0.9878 	0.9885 	0.9885 
-	stft	0.9964 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 	1.0000 
-	mfcc	1.0000 	1.0000 	1.0000 	0.9993 	0.9993 	0.9986 	0.9978 	0.9986 	0.9978 	0.9978 	0.9978 	0.9971 	0.9971 	0.9964 	0.9964 	0.9964 
-DenseNet	mel	 -	 -	0.9950 	0.9964 	0.9957 	0.9957 	0.9935 	0.9928 	0.9928 	0.9928 	0.9928 	0.9935 	0.9928 	0.9928 	0.9928 	0.9928 
-	stft	 -	 -	0.9986 	0.9978 	0.9957 	0.9964 	0.9957 	0.9964 	0.9964 	0.9971 	0.9964 	0.9971 	0.9964 	0.9957 	0.9964 	0.9950 
-	mfcc	 -	 -	1.0000 	0.9971 	0.9971 	0.9971 	0.9978 	0.9978 	0.9978 	0.9993 	0.9993 	1.0000 	0.9993 	0.9993 	1.0000 	1.0000 
-LSTM	mel	0.9993 	0.9935 	0.9899 	0.9863 	0.9777 	0.9784 	0.9799 	0.9784 	0.9705 	0.9633 	0.9669 	0.9784 	0.9734 	0.9741 	0.9640 	0.9727 
-	stft	1.0000 	0.9971 	0.9971 	0.9950 	0.9964 	0.9957 	0.9928 	0.9957 	0.9921 	0.9935 	0.9914 	0.9921 	0.9942 	0.9957 	0.9906 	0.9906 
-	mfcc	0.9978 	0.9993 	0.9957 	0.9971 	0.9978 	0.9957 	0.9950 	0.9971 	0.9978 	0.9971 	0.9971 	0.9964 	0.9964 	0.9957 	0.9964 	0.9928 
-![image](https://user-images.githubusercontent.com/117256746/220044670-b0baef42-a065-41f4-9934-51f5744c4e5c.png)
+# Model
+We used light models for detection because we tried to detect vishing in real-time using voice data. Machine learning models which take relatively short learning and evaluation time, and basic Deep learning models. `basic.py`, `DenseNet.py` and `LSTM.py` in `Model` folder are the code for experiments. Here are some examples to train and evaluate the models.
+
+**Basic ML**
+```
+python ml.py --feature_type 'mfcc' --feature_time '0.5' --result_root './result' --checkpoints_root './checkpoint' --gpu_id 0
+```
+
+**Simple DL**
+```
+python dl.py --model_name 'DenseNet' --feature_type 'mfcc' --feature_time '0.5' --result_root './result' --checkpoints_root './checkpoint' --gpu_id 0
+```
+
+We set the hyperparmeter of each model as table.
+
+![image](https://user-images.githubusercontent.com/117256746/220051121-0bb9ddeb-f7c1-4601-b647-2d370f4e4382.png)
+
+
+# Result
+- **Test accuracy for all feature and models** 
+
+	The test results are reported the average of five experiments. Most results report above the accuracy 99%
+ 
+	![image](https://user-images.githubusercontent.com/117256746/220046859-029d5d67-cc4e-4428-a070-377882d1dab7.png)
+
+- **Test time per case**
+
+	Next table shows the test time for total time segment by each feature extraction and each applied models. As you can see, every case took less than 0.03 seconds meaning it can be used for real-time detection.
+	
+	![image](https://user-images.githubusercontent.com/117256746/220048686-124448e0-ca8d-4cea-aa51-91d4294aedae.png)
+
