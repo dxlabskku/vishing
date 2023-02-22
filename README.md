@@ -48,5 +48,6 @@ The hyperparmeters of each model are as follow:
 
 	The table below shows the test time each time segment for each feature extraction methods for all models. As you can see, every case took less than 0.03 seconds, showing that they can be used for real-time detection.
 	
-	![image](https://user-images.githubusercontent.com/117256746/220048686-124448e0-ca8d-4cea-aa51-91d4294aedae.png)
+	
+	![image](https://user-images.githubusercontent.com/117256746/220589754-b01997f6-740f-4b8b-8e0a-9f83c5ec2628.png)
 
