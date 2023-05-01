@@ -8,7 +8,7 @@ This paper focuses on detection vishing, also known as voice phishing, a type of
 
 
 # Data
-We collected vishing dataset, organized as vishing call data and normal call data from [Korean Financial Supervisor Service](https://www.fss.or.kr/fss/main/sub1voice.do?menuNo=200012) and [AI Hub](https://aihub.or.kr/). We segmented the data by 0.1 second and the codes can be found in `time_split.py` in `preprocess` folder.
+We collected vishing dataset, organized as vishing call data and normal call data from [Korean Financial Supervisor Service](https://www.fss.or.kr/fss/main/sub1voice.do?menuNo=200012) and [AI Hub](https://aihub.or.kr/). We segmented the data by 0.1 second and the codes can be found in `time_split.py` in `preprocess` folder. On average, the conversation starts within 0.5 seconds, so it is meaningless to use data shorter than 0.5 seconds, and we did not remove the front silence, before 0.5 seconds, due to see how short data can be detected in the actual call. 
 
 **- Examples of dataset**
 
