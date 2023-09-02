@@ -1,10 +1,5 @@
 # Vishing
-
-This paper focuses on detection vishing, also known as voice phishing, a type of scam via phone calls. The damage caused by vishing is deteriorating year by year, thus calling the need of a real-time automatic vishing detection. Various previous studies on vishing detection have used whitelist or text contents converted from speech as the input features. However, such previous works cannot detect vishing rapidly. Therefore, this paper attempts to detect vishing based on direct call voice data without constructing a whitelist or converting the audio data to text data. For effective detection, several signal feature extraction methods for voice data are adopted and various machine and deep learning models are employed. The experiment results show that acoustic features are effective for vishing detection, reporting almost 99% accuracy. In addition, we confirm the effective length of data for detection and explore the possibility of real-time detection using voice data. Our contribution as follows.
-
-- We show that it is possible to directly use voice data without converting it into text for vishing detection. 
-- We share the appropriate length of the voice data for effective vishing detection. 
-- Finally, we report that real-time vishing detection is possible using voice data with experiments.
+This paper introduces a real-time vishing (voice phishing) detection method specifically designed for interactive calls, emphasizing the critical need for early detection to mitigate financial losses. Focused solely on acoustic voice features, not conversation content, this study capitalizes on distinctive phonetic traits exhibited by vishing perpetrators. Experimentation yields promising results: 1) Acoustic voice features effectively detect vishing in conversational contexts, 2) early detection is feasible via significant data time length analysis, and 3) the model demonstrates quick inference times suitable for real-time vishing prevention. The experimental models in our study exhibit impressive accuracy rates, and some even achieve perfection. This approach presents a powerful means of real-time vishing prevention, effectively mitigating the potential for financial devastation.
 
 
 # Data
@@ -16,8 +11,7 @@ We collected vishing dataset, organized as vishing call data and normal call dat
 
 
 # Model
-
-![image](https://user-images.githubusercontent.com/117256746/220055290-cf5f3099-3785-4232-943c-be2d0b9c0372.png)
+![overview](https://github.com/dxlabskku/vishing/assets/117256746/9bcbd101-961e-4418-9683-2c44c26dcbc0)
 
 Image shows the overview of our vishing detection process. We used light models for detection for real-time vishing detection: Machine learning models, which take relatively short learning and evaluation time and basic Deep learning models. `basic.py`, `DenseNet.py` and `LSTM.py` in `Model` folder are the codes for experiments. Here are some examples for training and evaluating the models. 
 
